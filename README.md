@@ -28,4 +28,12 @@ Embrace the magic of your special day and let EventSnaps handle the memories. Ge
 
 If you encounter any issues or have suggestions for improvement, please feel free to open an issue or submit a pull request. Your contributions are always welcome!
 
-Happy snapping!
+
+## Roadmap
+
+- **Improve UI/UX:** Refine and enhance the user interface for a more visually appealing and intuitive experience.
+- **Add Notifications and Loading Indicators:** Incorporate toast notifications to promptly communicate important information to users and incorporate loading indicators for a visual representation of the progress during asynchronous operations.
+- **Switch Between Host and Guest Versions:** Implement a toggle within the same page, allowing users to seamlessly switch between distinct Host and Guest versions of the application, ensuring a personalized and streamlined experience for all participants.
+- **Optimize Face Comparison:** Implement an efficient method to organize the complete album by faces, reducing the need for individual face comparisons and minimizing costly API calls.
+- **Datewise Sorting:** Enable sorting of photos by date, allowing users to browse through event memories in a chronological manner.
+- **Mobile Responsiveness:** Optimize the application for mobile devices, ensuring seamless compatibility and a positive user experience across various screen sizes.
