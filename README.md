@@ -1,24 +1,31 @@
 # EventSnaps
 
-Welcome to EventSnaps, an innovative facial recognition-based platform specifically designed for weddings, events, and special occasions. This application makes it easier than ever to organize, manage, and share photos taken at your event. Leveraging cutting-edge facial recognition technology, EventSnaps compares and groups photos based on the faces detected in them, allowing you to efficiently browse through the captured moments and memories of your special day.
+Welcome to EventSnaps, an innovative facial recognition-based platform specifically designed for weddings, events, and special occasions. This application makes it easier than ever to organize, manage, and share photos taken at your event. EventSnaps compares and groups photos based on the faces detected in them, allowing you and your guests to efficiently browse through the captured moments and memories of your special day.
 
 ## Introduction
 
-EventSnaps allows users to:
+EventSnaps addresses the challenges associated with managing and organizing photographs from weddings, events, and special occasions by offering a centralized solution for:
 
-- Upload photos taken at their event
-- Automatically compare and identify similar faces in the uploaded images
-- Browse and view images organized by recognized faces
-- Share and download images individually or in bulk
+- Disorganized and scattered photos: Event attendees often take numerous photos, which can become scattered across various devices and platforms. EventSnaps centralizes these images, making them accessible in one organized location.
 
-Designed with user-friendliness in mind, EventSnaps is the perfect solution for managing your event photographs, streamlining the process of finding, sharing, and saving your special moments.
+- Difficulty in finding specific moments or individuals: Manually browsing through hundreds or even thousands of photos to locate specific moments or individuals can be time-consuming and frustrating. EventSnaps leverages advanced facial recognition technology to automatically group images by detected faces, making it easy for users to find pictures of particular guests or moments.
+
+- Cumbersome sharing and downloading process: Sharing photos with friends, family, or event attendees can be a complex and time-consuming task, especially when dealing with multiple platforms or file formats. EventSnaps offers straightforward options for sharing and downloading images, either individually or in bulk, making the process seamless and efficient.
+
+- Lack of privacy and control over shared images: Many photo-sharing platforms do not offer robust privacy controls or customization options. EventSnaps provides users with secure storage and sharing of their event images, allowing them to maintain control over their content and privacy.
+
+Embrace the magic of your special day and let EventSnaps handle the memories. Get started today and enjoy a seamless, stress-free photo management experience.
 
 ## Features
 
 - User-friendly interface for uploading and managing event photos
-- Cutting-edge facial recognition technology for efficient photo organization
-- Secure storage and sharing of your event images
+- Guests can take a selfie or upload their photo to access all images featuring them from the event
+- Guests can also upload the images they took during the event for sharing with others
+- Secure storage and sharing of your event images using Google Drive
 - Easy downloading and sharing options for individual or multiple images
 - Beautiful, responsive, and customizable galleries for browsing your memories
+- Multilingual support for greater accessibility
 
-Embrace the magic of your special day and let EventSnaps handle the memories. Get started today and enjoy a seamless, stress-free photo management experience.
+If you encounter any issues or have suggestions for improvement, please feel free to open an issue or submit a pull request. Your contributions are always welcome!
+
+Happy snapping!
