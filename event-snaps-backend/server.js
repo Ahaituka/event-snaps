@@ -125,7 +125,7 @@ app.post('/api/compare', upload.single('image'), asyncHandler(async (req, res) =
 }));
 
 const getAccountDetails = async (userId) => {
-  const accountDetails = await prisma.account.findFirst({
+  const accountDetails = await prisma.account.findUniqueOrThrow({
     where: {
       userId: userId
     }
