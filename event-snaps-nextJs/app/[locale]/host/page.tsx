@@ -4,7 +4,7 @@
 import { signOut, useSession } from 'next-auth/react';
 import React, { useState } from 'react';
 import useDrivePicker from 'react-google-drive-picker'
-import { updateFolderId } from '../../../libs/setFolder';
+import { updateFolderId } from '../../libs/setFolder';
 
 interface HostDashboardProps {
 

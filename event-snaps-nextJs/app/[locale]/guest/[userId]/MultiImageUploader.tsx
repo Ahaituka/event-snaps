@@ -1,5 +1,6 @@
 // MultiImageUploader.tsx
-import { useTranslation } from "react-i18next";
+'use client'
+import {useTranslations} from 'next-intl';
 
 interface MultiImageUploaderProps {
   handleImagesChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
@@ -7,7 +8,7 @@ interface MultiImageUploaderProps {
 }
 
 const MultiImageUploader: React.FC<MultiImageUploaderProps> = ({ handleImagesChange, handleUploadImages }) => {
-  const { t } = useTranslation();
+  const t = useTranslations('Index');
 
   return (
     <div className="bg-white p-8 rounded shadow-md">
