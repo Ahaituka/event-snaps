@@ -1,4 +1,6 @@
-import { useTranslation } from "react-i18next";
+'use client'
+
+import {useTranslations} from 'next-intl';
 
 interface ImageDownloaderProps {
     handleImageChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
@@ -6,7 +8,7 @@ interface ImageDownloaderProps {
   }
   
   const ImageDownloader: React.FC<ImageDownloaderProps> = ({ handleImageChange, handleCompareFaces }) => {
-    const { t } = useTranslation();
+    const t = useTranslations('Index');
   
     return (
       <div className="bg-white p-8 rounded shadow-md">
