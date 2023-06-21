@@ -3,8 +3,7 @@ import { Inter } from "next/font/google";
 import Provider from "../context/AuthContext";
 import ToasterContext from "../context/ToasterContext";
 import { NextIntlClientProvider } from "next-intl";
-import { notFound, useRouter } from "next/navigation";
-import {redirect} from 'next-intl/server';
+import { Analytics } from '@vercel/analytics/react';
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -40,6 +39,7 @@ export default async function RootLayout({
           <Provider>
             <ToasterContext />
             {children}
+            <Analytics />
           </Provider>
         </NextIntlClientProvider>
       </body>
