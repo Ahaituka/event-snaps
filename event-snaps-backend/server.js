@@ -99,7 +99,7 @@ app.post('/api/compare', upload.single('image'), asyncHandler(async (req, res) =
           matchingImages.push(folderImage);
         }
       } catch (error) {
-        console.error('Error comparing faces:', error);
+        console.error('Error comparing faces:', error.message);
       }
     }
 
@@ -120,7 +120,7 @@ app.post('/api/compare', upload.single('image'), asyncHandler(async (req, res) =
       images: matchingImages,
     });
   } catch (error) {
-    throw new Error('Error fetching images from Google Drive folder:');
+    throw new Error('Error fetching images from Google Drive folder:',error.message);
   }
 }));
 
@@ -199,7 +199,7 @@ app.get('/api/download/:fileId', asyncHandler(async (req, res) => {
 
     res.send(Buffer.from(file.data));
   } catch (error) {
-    throw new Error('Error downloading file from Google Drive');
+    throw new Error('Error downloading file from Google Drive',error.message);
   }
 }));
 
