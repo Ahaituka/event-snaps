@@ -17,7 +17,7 @@ const Host: React.FC<HostProps> = (props) => {
   
   useEffect(() => {
     if (session?.status === 'authenticated') {
-      router.push('/host/dashboard')
+      router.push('/host')
     }
   })
 

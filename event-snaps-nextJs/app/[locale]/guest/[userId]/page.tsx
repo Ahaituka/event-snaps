@@ -2,7 +2,7 @@
 
 import React, { useState } from "react";
 import axios from "axios";
-import { useTranslation } from "react-i18next";
+import {useTranslations} from 'next-intl';
 import JSZip from "jszip";
 import { saveAs } from "file-saver";
 import Header from './Header';
@@ -30,7 +30,7 @@ const Guest: React.FC<GuestProps> = ({ params }) => {
   const [imageFiles, setImageFiles] = useState<ImageFile[]>([]);
   const [selectedImageIds, setSelectedImageIds] = useState<string[]>([]);
   const [isLoading, setIsLoading] = useState<boolean>(false);
-  const { t, i18n } = useTranslation();
+  const t = useTranslations('Index');
   const userId = params.userId;
 
   const apiUrl = "http://localhost:3001/api";
@@ -49,7 +49,7 @@ const Guest: React.FC<GuestProps> = ({ params }) => {
   };
 
   const changeLanguage = (language: string) => {
-    i18n.changeLanguage(language);
+    // i18n.changeLanguage(language);
   };
 
   const handleCompareFaces = async () => {
