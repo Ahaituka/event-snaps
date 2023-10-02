@@ -56,6 +56,7 @@ const HostDashboard: React.FC<HostDashboardProps> = (props) => {
     })
   }
 
+  console.log("authResponse",userId)
 
   return (
     <div className="container mx-auto px-4 text-center">

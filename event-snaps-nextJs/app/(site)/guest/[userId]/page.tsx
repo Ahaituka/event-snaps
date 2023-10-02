@@ -97,35 +97,29 @@ const Guest: React.FC<GuestProps> = ({ params }) => {
   const handleDownloadImages = async (fileIds: string[]) => {
     const zip = new JSZip();
     document.body.style.cursor = 'wait'; // Set cursor to wait
-
+    console.log(userId)  
     try {
       const blobs = await Promise.all(
         fileIds.map(async (fileId) => {
-          const response = await fetch(`${apiUrl}/download/${fileId}`);
-
-          if (!response.ok) {
-            throw new Error(`Failed to download image with fileId: ${fileId}`);
-          }
-
-          return response.blob();
+          const response = await axios.get(`${apiUrl}/download/${fileId}`, {
+            params: { userId },
+            responseType: 'blob'
+          });
+  
+          return new Blob([response.data], { type: 'image/jpeg' });
         })
-      );
-
+      );  
       blobs.forEach((blob, index) => {
-        const file = new File([blob], `${fileIds[index]}.jpg`, {
-          type: "image/jpeg",
-        });
-        zip.file(`${fileIds[index]}.jpg`, file, { binary: true });
-      });
-
-      const content = await zip.generateAsync({ type: "blob" });
-      saveAs(content, "images.zip");
+        zip.file(`${fileIds[index]}.jpg`, blob, { binary: true });
+      });  
+      const content = await zip.generateAsync({ type: 'blob' });
+      saveAs(content, 'images.zip');
     } catch (error) {
-      console.error("Error downloading images:", error);
-    }
+      console.error('Error downloading images:', error);
+    }  
     document.body.style.cursor = 'default'; // Set cursor back to default
-
   };
+
 
   const handleImageSelection = (fileId: string, isSelected: boolean) => {
     if (isSelected) {
@@ -149,7 +143,7 @@ const Guest: React.FC<GuestProps> = ({ params }) => {
       <LoadingSpinner isLoading={isLoading} />
 
       <div className="container mx-auto px-4">
-        <Header changeLanguage={changeLanguage} />
+        {/* <Header changeLanguage={changeLanguage} /> */}
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           <ImageDownloader

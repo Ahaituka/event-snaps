@@ -16,7 +16,7 @@ export const authOptions = {
                 params: {    
                 access_type: "offline",            
                 scope:
-                  'https://www.googleapis.com/auth/userinfo.profile https://www.googleapis.com/auth/userinfo.email https://www.googleapis.com/auth/drive.file',
+                  'https://www.googleapis.com/auth/userinfo.profile https://www.googleapis.com/auth/userinfo.email https://www.googleapis.com/auth/drive',
                 },
               },   
         }),        
@@ -27,24 +27,12 @@ export const authOptions = {
     },
     database: process.env.DATABASE_URL,
     debug: process.env.NODE_ENV === "development",
-    callbacks: {
-        async jwt({ token, account }: { token: any, account: any, }) {
-            console.log('jwt callback',account)
-            if (account?.access_token) {
-                token.accessToken = account.access_token;
-            }
-            return token;
-        },
-
+    callbacks: {   
         async session({ session, token } : { session: any, token: any }) {
-            session.accessToken = token.accessToken;
             session.user.id = token.sub;
             return session;
         },
     },
-
-
-
 }
 
 const handler = NextAuth(authOptions)
