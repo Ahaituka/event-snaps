@@ -4,7 +4,7 @@ import { useTranslation } from "react-i18next";
 interface ImageGalleryProps {
     matchingImages: string[];
     selectedImageIds: string[];
-    imageFiles: ImageFile[];
+    imageFiles: any;
     handleImageSelection: (fileId: string, isSelected: boolean) => void;
     handleDownloadImages: (fileIds: string[]) => Promise<void>;
   }
