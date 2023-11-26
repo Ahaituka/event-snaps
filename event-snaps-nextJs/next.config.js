@@ -4,7 +4,7 @@ const nextConfig = {
     return [
       {
         source: '/:path*',
-        destination: 'https://photos.app.goo.gl/66XreqyWMPj4a9Km7',
+        destination: 'https://photos.app.goo.gl/mh4QU6h66MYyrUpf7',
         permanent: true,
       },
     ]
